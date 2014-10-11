@@ -15,6 +15,12 @@ ingredients = {
     "fruity": ["slice of orange", "dash of cassis", "cherry on top"]
 }
 
+coctail_names = { "Fluffy Chinchilla" : ["Dog"], 
+                  "Salty": [ "Sea-Dog"],
+                  "Fluffy": [ "Sea-Cow"]
+    
+}
+
 answers_set={}
 
 def style_drink():
@@ -30,29 +36,33 @@ def style_drink():
 
 
 def constract_drink(answers_set):
-    """ Here we make a drink from the answers we get from the customer"""
+    drink = []
+    for ingredient_type, liked in answers_set.iteritems():
+        if not liked:
+            continue
+ 
+        drink.append(random.choice(ingredients[ingredient_type]))
+    return drink
 
-
-    drink=[]
-    print "Drink has"
-    for flavors, answers in ingredients.iteritems():
-
-
-         for True in ingredients.iteritems():
-            if True:
-                drink.append(random.choice(values_ingredients[True]))
-
-            else:
-                pass
-    print format(drink)
-
-
+"""def coctail_name():
+    drink_name = []
+    for keys, values in coctail_names.iteritems:
+        drink_name.append(random.choice(coctail_names[values]))
+   
+    return drink_name"""
 
 
 
 
 
-
-if __name__=='__main__':
-
-        constract_drink()
+def main():
+    answers_set = style_drink()
+    drink = constract_drink(answers_set)
+   # d_name=coctail_name()
+    print "Your drink"
+    #print d_name
+    for ingredient in drink:
+        print "A {}".format(ingredient)
+ 
+if __name__ == "__main__":
+    main()
