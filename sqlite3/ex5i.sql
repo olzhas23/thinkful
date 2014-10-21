@@ -1,0 +1,1 @@
+insert into person_pet values (0,1), (1,0);

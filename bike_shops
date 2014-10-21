@@ -1,0 +1,18 @@
+class Bike_Shops:
+
+      #"""inventory is the dictionary with names and prices of the inventory we have"""
+      # bike shop takes name, inventory and margin and returns the profit
+    
+    def __init__(self,name, margin, *kwargs):
+        self.name=name
+        #self.inventory=inventory
+        #self.margin=margin
+
+
+        for name, cost in inventory.iteritems():
+
+            price=(cost*margin)/100+cost
+            print name
+            print price
+
+        self.price=price   
